@@ -18,7 +18,20 @@ const projects: {
   tag: string;
   description: string;
   href: string;
-}[] = [];
+}[] = [
+  {
+    title: "Kampheakroath Bungalows",
+    tag: "Riverside resort booking site",
+    description: "A riverside bungalow resort in Kampot, Cambodia — rooms, photo gallery, amenities, and direct contact for bookings.",
+    href: "https://www.kampheakroath-bungalow.com/",
+  },
+  {
+    title: "Green Juice",
+    tag: "Organic juice brand site",
+    description: "An interactive landing page showcasing organic cold-pressed juice flavors with dynamic sizing and pricing options.",
+    href: "https://green-juice.vercel.app/",
+  },
+];
 
 export default function WorkSection() {
   const slots = Math.max(projects.length, 2);
