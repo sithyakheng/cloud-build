@@ -16,10 +16,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-bp-line/40 bg-bp-deep/90 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2 font-mono text-sm tracking-wide text-bp-paper">
-          <span className="relative flex h-5 w-5 items-center justify-center">
-            <span className="absolute h-full w-px bg-signal" />
-            <span className="absolute h-px w-full bg-signal" />
-          </span>
+          <img src="/logo.png" alt="Cloud Build logo" className="h-8 w-8 rounded" />
           CLOUD&nbsp;BUILD
         </a>
 
