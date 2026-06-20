@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0e2238;
+  color: #f3f5f1;
+  font-family: var(--font-body);
+}
+
+/* Blueprint grid canvas used behind every dark section */
+.bp-canvas {
+  position: relative;
+  background-color: #15314f;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px, 32px 32px, 160px 160px, 160px 160px;
+}
+
+/* Corner crop marks, like registration marks on a printed sheet */
+.corner-marks {
+  position: relative;
+}
+.corner-marks::before,
+.corner-marks::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+.corner-marks::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid rgba(255, 107, 53, 0.7);
+  border-left: 1.5px solid rgba(255, 107, 53, 0.7);
+}
+.corner-marks::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid rgba(255, 107, 53, 0.7);
+  border-right: 1.5px solid rgba(255, 107, 53, 0.7);
+}
+
+/* Pinned paper card, slightly rotated like a hand-pinned spec sheet */
+.pin-card {
+  background-color: #f3f5f1;
+  color: #102233;
+  box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+/* Scroll-reveal primitive, paired with the Reveal component */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Dimension line connector used in the process section */
+.dim-line {
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(127, 166, 196, 0.6) 0,
+    rgba(127, 166, 196, 0.6) 6px,
+    transparent 6px,
+    transparent 11px
+  );
+}
