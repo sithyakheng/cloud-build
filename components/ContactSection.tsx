@@ -15,10 +15,12 @@ import {
  * Leave any of them as "#" to hide that icon's real link for now.
  */
 const socials = [
-  { name: "Facebook", href: "#", Icon: FacebookIcon },
+  {
+    name: "Facebook",
+    href: "https://web.facebook.com/profile.php?id=61591208636187",
+    Icon: FacebookIcon,
+  },
   { name: "Telegram", href: "#", Icon: TelegramIcon },
-  { name: "TikTok", href: "#", Icon: TikTokIcon },
-  { name: "Instagram", href: "#", Icon: InstagramIcon },
 ];
 
 export default function ContactSection() {
